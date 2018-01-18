@@ -1,9 +1,9 @@
-n=input('Enter your FizzBuzz Value', )
+
 
 
 def fizz_buzz(n):
     '''
-    enter the number you want to play fizz buzz with, default 15
+    enter the number you want to play fizz buzz with
     '''
     
     for value in range (1,n+1):
@@ -16,5 +16,15 @@ def fizz_buzz(n):
         else:
             print(value)
     
+while True:
+    n=input('Enter your FizzBuzz Value:  ', )
+    try:
+        n=int(n)
+        fizz_buzz(n)
+        break
     
-fizz_buzz(n)
+    except ValueError:
+        print('INVALID ENTRY: please use a numeric entry.')
+        print('')
+        continue
+
